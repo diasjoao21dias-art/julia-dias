@@ -63,7 +63,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6 text-white drop-shadow-md">
                     <p className="font-display text-2xl font-bold mb-1">Júlia Dias Braga</p>
-                    <p className="text-sm opacity-90 font-medium tracking-wide">Nutricionista Clínica CRN9: 35106</p>
+                    <p className="text-sm opacity-90 font-medium tracking-wide">Nutricionista Clínica CRN9 35106</p>
                   </div>
                 </div>
               </motion.div>
@@ -93,7 +93,7 @@ export default function Home() {
               <motion.div variants={fadeInUp} className="mt-10 flex flex-wrap items-center gap-6 text-[10px] sm:text-xs text-muted-foreground font-medium uppercase tracking-wider">
                 <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/30 backdrop-blur-sm border border-white/50">
                   <CheckCircle2 className="w-4 h-4 text-primary" />
-                  <span>CRN9: 35106</span>
+                  <span>CRN9 35106</span>
                 </div>
                 <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/30 backdrop-blur-sm border border-white/50">
                   <CheckCircle2 className="w-4 h-4 text-primary" />
