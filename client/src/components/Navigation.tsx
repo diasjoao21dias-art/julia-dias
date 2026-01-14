@@ -41,7 +41,7 @@ export function Navigation() {
     >
       <div className="container mx-auto px-4 md:px-6">
         <nav className="flex items-center justify-between">
-          <Link href="/" className="group flex items-center gap-2 z-50">
+          <Link href="/" onClick={(e) => handleScrollTo(e, "#hero")} className="group flex items-center gap-2 z-50">
             <div className="p-2 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
               <Leaf className="w-5 h-5" />
             </div>

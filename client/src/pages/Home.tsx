@@ -23,35 +23,19 @@ export default function Home() {
       <Navigation />
 
       {/* HERO SECTION */}
-      <section id="hero" className="relative min-h-screen flex items-center pt-24 overflow-hidden">
-        {/* Background Decorative Elements with Parallax effect (simulated with glass) */}
+      <section id="hero" className="relative min-h-screen flex items-center pt-20 pb-12 overflow-hidden">
+        {/* Background Decorative Elements */}
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-br from-secondary/40 to-transparent -z-10 rounded-bl-[120px] hidden lg:block" />
-        <motion.div 
-          animate={{ 
-            y: [0, -20, 0],
-            rotate: [0, 5, 0]
-          }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-40 right-20 w-80 h-80 bg-primary/8 rounded-full blur-[100px] -z-10" 
-        />
-        <motion.div 
-          animate={{ 
-            x: [0, 30, 0],
-            y: [0, 20, 0]
-          }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-20 left-20 w-[500px] h-[500px] bg-accent/30 rounded-full blur-[120px] -z-10" 
-        />
-
+        
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <motion.div 
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
-              className="max-w-2xl"
+              className="max-w-2xl z-10"
             >
-              <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/50 backdrop-blur-md border border-primary/10 text-primary text-sm font-semibold mb-8 shadow-sm">
+              <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/50 backdrop-blur-md border border-primary/10 text-primary text-xs sm:text-sm font-semibold mb-6 shadow-sm">
                 <span className="relative flex h-2.5 w-2.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
@@ -59,39 +43,60 @@ export default function Home() {
                 Nutrição Clínica de Alta Performance
               </motion.div>
               
-              <motion.h1 variants={fadeInUp} className="text-6xl md:text-7xl lg:text-8xl font-display font-medium text-foreground leading-[1.05] mb-8">
+              <motion.h1 variants={fadeInUp} className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-medium text-foreground leading-[1.05] mb-6">
                 Sua saúde em <span className="text-primary italic relative">harmonia<svg className="absolute -bottom-2 left-0 w-full h-3 text-primary/20" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 25 0, 50 5 T 100 5" fill="none" stroke="currentColor" strokeWidth="4" /></svg></span> e ciência.
               </motion.h1>
+
+              {/* Mobile Profile Image - Integrated into Hero for mobile */}
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                className="lg:hidden mb-8 relative"
+              >
+                <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border-4 border-white relative group">
+                  <img 
+                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2070&auto=format&fit=crop" 
+                    alt="Júlia Dias Braga" 
+                    className="object-cover w-full h-full"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <p className="font-display text-xl font-bold">Júlia Dias Braga</p>
+                    <p className="text-xs opacity-80">Nutricionista Clínica CRN9: 35106</p>
+                  </div>
+                </div>
+              </motion.div>
               
-              <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed max-w-xl text-balance font-light">
+              <motion.p variants={fadeInUp} className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-xl text-balance font-light">
                 Abordagem personalizada e baseada em evidências para otimizar sua vitalidade e longevidade.
               </motion.p>
               
-              <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-5">
+              <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
                 <a 
                   href="https://wa.me/5534991480036"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-10 py-5 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1.5 gap-3 group active:scale-95"
+                  className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1.5 gap-3 group active:scale-95 text-sm sm:text-base"
                 >
                   Iniciar Transformação
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
                 </a>
                 <a 
                   href="#services"
-                  className="inline-flex items-center justify-center px-10 py-5 rounded-full border-2 border-primary/20 bg-white/40 backdrop-blur-sm text-foreground font-semibold hover:bg-white/60 transition-all hover:border-primary/40 active:scale-95"
+                  className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-primary/20 bg-white/40 backdrop-blur-sm text-foreground font-semibold hover:bg-white/60 transition-all hover:border-primary/40 active:scale-95 text-sm sm:text-base"
                 >
                   Meus Métodos
                 </a>
               </motion.div>
 
-              <motion.div variants={fadeInUp} className="mt-12 flex items-center gap-8 text-sm text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+              <motion.div variants={fadeInUp} className="mt-10 flex flex-wrap items-center gap-6 text-[10px] sm:text-xs text-muted-foreground font-medium uppercase tracking-wider">
+                <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/30 backdrop-blur-sm border border-white/50">
+                  <CheckCircle2 className="w-4 h-4 text-primary" />
                   <span>CRN9: 35106</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/30 backdrop-blur-sm border border-white/50">
+                  <CheckCircle2 className="w-4 h-4 text-primary" />
                   <span>Atendimento Presencial</span>
                 </div>
               </motion.div>
