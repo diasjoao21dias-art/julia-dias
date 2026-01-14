@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
-import { ArrowRight, CheckCircle2, MapPin, Phone, Mail, Instagram, Clock, Award, Heart, Stethoscope } from "lucide-react";
+import { ArrowRight, CheckCircle2, MapPin, Phone, Mail, Instagram, Facebook, Linkedin, Clock, Award, Heart, Stethoscope } from "lucide-react";
 
 export default function Home() {
   const fadeInUp = {
@@ -399,8 +399,14 @@ export default function Home() {
               <div className="mt-12 pt-8 border-t border-white/10">
                 <p className="text-sm text-white/50 mb-4">Siga nas redes sociais</p>
                 <div className="flex gap-4">
-                  <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                  <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors group">
                     <Instagram className="w-5 h-5" />
+                  </a>
+                  <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors group">
+                    <Facebook className="w-5 h-5" />
+                  </a>
+                  <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors group">
+                    <Linkedin className="w-5 h-5" />
                   </a>
                 </div>
               </div>
