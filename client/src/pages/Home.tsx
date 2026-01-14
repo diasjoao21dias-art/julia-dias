@@ -60,10 +60,10 @@ export default function Home() {
                     alt="Júlia Dias Braga" 
                     className="object-cover w-full h-full"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <p className="font-display text-xl font-bold">Júlia Dias Braga</p>
-                    <p className="text-xs opacity-80">Nutricionista Clínica CRN9: 35106</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 text-white drop-shadow-md">
+                    <p className="font-display text-2xl font-bold mb-1">Júlia Dias Braga</p>
+                    <p className="text-sm opacity-90 font-medium tracking-wide">Nutricionista Clínica CRN9: 35106</p>
                   </div>
                 </div>
               </motion.div>
