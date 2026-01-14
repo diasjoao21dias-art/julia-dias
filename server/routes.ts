@@ -1,14 +1,12 @@
 import type { Express } from "express";
 import type { Server } from "http";
-import { storage } from "./storage";
-import { api } from "@shared/routes";
 
 export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  // Basic health check endpoint
-  app.get(api.status.path, (_req, res) => {
+  // Health check for static site
+  app.get("/api/status", (_req, res) => {
     res.json({ status: "online" });
   });
 
