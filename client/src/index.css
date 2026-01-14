@@ -9,15 +9,15 @@
   --font-display: 'Cormorant Garamond', serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
 
-  /* Premium 2026 Emerald & Sage Palette */
-  --background: 145 25% 98.5%;      /* Crisp clean sage white */
-  --foreground: 165 45% 12%;        /* Deep midnight forest */
+  /* Premium 2026 Emerald & Sage Palette - Adjusted for Sage Background */
+  --background: 155 35% 94%;      /* Sage green background */
+  --foreground: 165 45% 10%;        /* Deeper forest for better contrast */
   
-  --primary: 162 45% 32%;           /* Rich Emerald */
+  --primary: 162 45% 28%;           /* Darker Emerald for contrast on sage */
   --primary-foreground: 162 10% 98%;
   
-  --secondary: 155 35% 94%;         /* Soft Sage */
-  --secondary-foreground: 165 45% 20%;
+  --secondary: 155 25% 90%;         /* Slightly darker sage for sections */
+  --secondary-foreground: 165 45% 15%;
   
   --muted: 155 20% 96%;
   --muted-foreground: 165 15% 40%;

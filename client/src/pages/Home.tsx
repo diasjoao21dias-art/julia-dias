@@ -136,46 +136,118 @@ export default function Home() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section id="about" className="py-24 bg-secondary/30 relative">
+      <section id="about" className="py-24 bg-white/40 backdrop-blur-sm relative">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display text-foreground mb-6">Sobre Mim</h2>
-            <div className="w-20 h-1 bg-primary mx-auto mb-6 rounded-full" />
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Meu nome é Júlia Dias Braga. Acredito que a nutrição vai muito além de dietas restritivas. 
-              Minha missão é ajudar você a encontrar o equilíbrio entre saúde, bem-estar e prazer em comer.
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <motion.span 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="text-primary font-semibold tracking-widest uppercase text-sm mb-4 block"
+            >
+              Conheça a Profissional
+            </motion.span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display text-foreground mb-8">Dra. Júlia Dias Braga</h2>
+            <div className="w-24 h-1.5 bg-primary/20 mx-auto mb-10 rounded-full overflow-hidden">
+              <motion.div 
+                initial={{ x: "-100%" }}
+                whileInView={{ x: "0%" }}
+                transition={{ duration: 1 }}
+                className="w-full h-full bg-primary" 
+              />
+            </div>
+            <p className="text-xl text-muted-foreground leading-relaxed font-light">
+              Nutricionista Clínica apaixonada por transformar vidas através de uma alimentação consciente e equilibrada. 
+              Com foco em ciência e empatia, busco descomplicar a nutrição para que você alcance sua melhor versão.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-border/50 hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6">
-                <Stethoscope className="w-7 h-7" />
-              </div>
-              <h3 className="text-xl font-bold font-display mb-3">Abordagem Clínica</h3>
-              <p className="text-muted-foreground">
-                Tratamento focado na prevenção e controle de doenças, com base em exames e histórico clínico detalhado.
-              </p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-border/50 hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6">
-                <Heart className="w-7 h-7" />
-              </div>
-              <h3 className="text-xl font-bold font-display mb-3">Comportamental</h3>
-              <p className="text-muted-foreground">
-                Entendimento da sua rotina e relação com a comida para criar mudanças de hábitos duradouras.
-              </p>
-            </div>
+          <div className="grid md:grid-cols-4 gap-6">
+            {[
+              { icon: Stethoscope, title: "Foco Clínico", desc: "Análise profunda do seu histórico metabólico." },
+              { icon: Heart, title: "Humanização", desc: "Atendimento acolhedor e sem julgamentos." },
+              { icon: Award, title: "Especialista", desc: "Conhecimento atualizado e baseado em evidências." },
+              { icon: Clock, title: "Acompanhamento", desc: "Suporte contínuo na sua jornada de saúde." }
+            ].map((item, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-white/60 backdrop-blur-md p-8 rounded-3xl border border-primary/5 hover:border-primary/20 transition-all hover:shadow-xl hover:shadow-primary/5 group"
+              >
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <item.icon className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold font-display mb-3">{item.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-border/50 hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6">
-                <Award className="w-7 h-7" />
+      {/* METODOLOGIA SECTION */}
+      <section id="methodology" className="py-24 relative overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              className="relative rounded-[3rem] overflow-hidden aspect-square border-8 border-white shadow-2xl"
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2070&auto=format&fit=crop" 
+                alt="Consultation" 
+                className="object-cover w-full h-full"
+              />
+              <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
+            </motion.div>
+
+            <div>
+              <span className="text-primary font-semibold tracking-widest uppercase text-sm mb-4 block">Meu Método</span>
+              <h2 className="text-4xl md:text-5xl font-display text-foreground mb-10 italic">Como funciona nossa jornada</h2>
+              
+              <div className="space-y-10">
+                {[
+                  { step: "01", title: "Avaliação 360°", desc: "Análise de exames, rotina, sono e relação emocional com a comida." },
+                  { step: "02", title: "Plano sob Medida", desc: "Criação de um planejamento real, prático e que respeita seus gostos." },
+                  { step: "03", title: "Suporte Ativo", desc: "Ajustes constantes e suporte para superar desafios do dia a dia." }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-6">
+                    <span className="text-4xl font-display text-primary/30 font-bold">{item.step}</span>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <h3 className="text-xl font-bold font-display mb-3">Personalização</h3>
-              <p className="text-muted-foreground">
-                Planejamento alimentar individualizado, respeitando suas preferências, cultura e necessidades.
-              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ SECTION */}
+      <section id="faq" className="py-24 bg-primary/5">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-4xl font-display text-center mb-16">Dúvidas Frequentes</h2>
+            <div className="space-y-4">
+              {[
+                { q: "Preciso de exames para a primeira consulta?", a: "Se você tiver exames recentes (últimos 6 meses), pode trazê-los. Caso contrário, solicitaremos conforme a necessidade." },
+                { q: "O plano alimentar é entregue na hora?", a: "Para garantir a máxima personalização, o plano é enviado em até 48h após a consulta detalhada." },
+                { q: "Atende convênios?", a: "Atendemos de forma particular, mas fornecemos recibo para que você possa solicitar o reembolso junto ao seu convênio." }
+              ].map((item, i) => (
+                <details key={i} className="group bg-white rounded-2xl border border-primary/5 overflow-hidden">
+                  <summary className="flex items-center justify-between p-6 cursor-pointer list-none font-semibold text-lg hover:bg-primary/5 transition-colors">
+                    {item.q}
+                    <span className="text-primary group-open:rotate-45 transition-transform">+</span>
+                  </summary>
+                  <div className="p-6 pt-0 text-muted-foreground leading-relaxed border-t border-primary/5">
+                    {item.a}
+                  </div>
+                </details>
+              ))}
             </div>
           </div>
         </div>

@@ -18,7 +18,9 @@ export function Navigation() {
   const navLinks = [
     { name: "Início", href: "#hero" },
     { name: "Sobre", href: "#about" },
+    { name: "Método", href: "#methodology" },
     { name: "Serviços", href: "#services" },
+    { name: "FAQ", href: "#faq" },
     { name: "Localização", href: "#location" },
   ];
 
