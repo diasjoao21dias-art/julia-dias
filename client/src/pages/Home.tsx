@@ -59,7 +59,7 @@ export default function Home() {
                   <img 
                     src={personalHeroImg} 
                     alt="Júlia Dias Braga" 
-                    className="object-cover w-full h-full"
+                    className="object-cover w-full h-full object-[center_20%]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6 text-white drop-shadow-md">
