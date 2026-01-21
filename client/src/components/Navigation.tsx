@@ -67,12 +67,12 @@ export function Navigation() {
               </a>
             ))}
             <a 
-              href="https://wa.me/5534991480036" 
+              href="https://calendar.app.google/dqk9CGTm7ZSKpMg56" 
               target="_blank"
               rel="noopener noreferrer"
               className="bg-primary text-primary-foreground px-6 py-2.5 rounded-full text-sm font-medium hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
             >
-              Agendar Consulta
+              Agendar Agora
             </a>
           </div>
 
@@ -107,12 +107,12 @@ export function Navigation() {
                 </a>
               ))}
               <a 
-                href="https://wa.me/5534991480036" 
+                href="https://calendar.app.google/dqk9CGTm7ZSKpMg56" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-primary text-primary-foreground text-center py-3 rounded-xl font-medium mt-2"
               >
-                Agendar via WhatsApp
+                Agendar via Calendário
               </a>
             </div>
           </motion.div>

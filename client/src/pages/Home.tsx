@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
-import { ArrowRight, CheckCircle2, MapPin, Phone, Mail, Instagram, Facebook, Linkedin, Clock, Award, Heart, Stethoscope } from "lucide-react";
+import { ArrowRight, CheckCircle2, MapPin, Phone, Mail, Instagram, Facebook, Linkedin, Clock, Award, Heart, Stethoscope, Calendar } from "lucide-react";
 
 export default function Home() {
   const fadeInUp = {
@@ -74,19 +74,21 @@ export default function Home() {
               
               <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="https://wa.me/5534991480036"
+                  href="https://calendar.app.google/dqk9CGTm7ZSKpMg56"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1.5 gap-3 group active:scale-95 text-sm sm:text-base"
                 >
-                  Iniciar Transformação
+                  Agendar Consulta Agora
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
                 </a>
                 <a 
-                  href="#services"
+                  href="https://wa.me/5534991480036"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-primary/20 bg-white/40 backdrop-blur-sm text-foreground font-semibold hover:bg-white/60 transition-all hover:border-primary/40 active:scale-95 text-sm sm:text-base"
                 >
-                  Meus Métodos
+                  Falar no WhatsApp
                 </a>
               </motion.div>
 
@@ -318,6 +320,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CTA SECTION */}
+      <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full opacity-10">
+          <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+        </div>
+        
+        <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="max-w-3xl mx-auto"
+          >
+            <h2 className="text-4xl md:text-5xl font-display font-medium mb-6">
+              Pronto para dar o primeiro passo rumo à sua melhor versão?
+            </h2>
+            <p className="text-xl opacity-90 mb-10 font-light">
+              Escolha o melhor horário para você e agende sua consulta de forma rápida e prática.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="https://calendar.app.google/dqk9CGTm7ZSKpMg56"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-10 py-5 rounded-full bg-white text-primary font-bold hover:bg-neutral-100 transition-all hover:shadow-2xl hover:-translate-y-1.5 gap-3 active:scale-95"
+              >
+                Agendar Pelo Calendário
+                <Calendar className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://wa.me/5534991480036"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-10 py-5 rounded-full border-2 border-white/30 text-white font-bold hover:bg-white/10 transition-all active:scale-95"
+              >
+                Dúvidas pelo WhatsApp
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* LOCATION & CONTACT SECTION */}
       <section id="location" className="py-24 bg-foreground text-white relative overflow-hidden">
         {/* Decorative background shapes */}
@@ -424,15 +468,25 @@ export default function Home() {
       <motion.div 
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="fixed bottom-6 right-6 z-50 lg:hidden"
+        className="fixed bottom-6 right-6 z-50 flex flex-col gap-4"
       >
         <a 
           href="https://wa.me/5534991480036"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full shadow-2xl active:scale-90 transition-transform"
+          className="flex items-center justify-center w-14 h-14 bg-emerald-500 text-white rounded-full shadow-2xl active:scale-90 transition-transform"
+          title="WhatsApp"
         >
           <Phone className="w-6 h-6" />
+        </a>
+        <a 
+          href="https://calendar.app.google/dqk9CGTm7ZSKpMg56"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full shadow-2xl active:scale-90 transition-transform"
+          title="Agendar Consulta"
+        >
+          <Clock className="w-6 h-6" />
         </a>
       </motion.div>
     </div>
