@@ -1,7 +1,8 @@
 import personalHeroImg from "@assets/IMG_9770.jpg_1769008383132.jpeg";
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
-import { ArrowRight, CheckCircle2, MapPin, Phone, Mail, Instagram, Facebook, Linkedin, Clock, Award, Heart, Stethoscope, Calendar } from "lucide-react";
+import { ArrowRight, CheckCircle2, MapPin, Mail, Instagram, Facebook, Linkedin, Clock, Award, Heart, Stethoscope, Calendar } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 
 export default function Home() {
   const fadeInUp = {
@@ -461,7 +462,7 @@ export default function Home() {
                   className="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors border border-white/5 group"
                 >
                   <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
-                    <Phone className="w-5 h-5" />
+                    <SiWhatsapp className="w-5 h-5" />
                   </div>
                   <div>
                     <p className="text-xs text-white/50 uppercase tracking-wider font-semibold">WhatsApp / Telefone</p>
@@ -515,7 +516,7 @@ export default function Home() {
           className="flex items-center justify-center w-14 h-14 bg-emerald-500 text-white rounded-full shadow-2xl active:scale-90 transition-transform"
           title="WhatsApp"
         >
-          <Phone className="w-6 h-6" />
+          <SiWhatsapp className="w-6 h-6" />
         </a>
         <a 
           href="https://calendar.app.google/dqk9CGTm7ZSKpMg56"
