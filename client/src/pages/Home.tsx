@@ -99,7 +99,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/30 backdrop-blur-sm border border-white/50">
                   <CheckCircle2 className="w-4 h-4 text-primary" />
-                  <span>Atendimento Presencial</span>
+                  <span>Atendimento Presencial e Online</span>
                 </div>
               </motion.div>
             </motion.div>
@@ -243,7 +243,7 @@ export default function Home() {
             <div className="space-y-4">
               {[
                 { q: "Preciso de exames para a primeira consulta?", a: "Se você tiver exames recentes (últimos 6 meses), pode trazê-los. Caso contrário, solicitaremos conforme a necessidade." },
-                { q: "O plano alimentar é entregue na hora?", a: "Para garantir a máxima personalização, o plano é enviado em até 48h após a consulta detalhada." },
+                { q: "O plano alimentar é entregue na hora?", a: "Para garantir a máxima personalização, o plano é enviado de 5 a 7 dias após a consulta detalhada." },
                 { q: "Atende convênios?", a: "Atendemos de forma particular, mas fornecemos recibo para que você possa solicitar o reembolso junto ao seu convênio." }
               ].map((item, i) => (
                 <details key={i} className="group bg-white rounded-2xl border border-primary/5 overflow-hidden">
@@ -318,6 +318,40 @@ export default function Home() {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS SECTION */}
+      <section className="py-24 relative overflow-hidden bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-16">
+            <span className="text-primary font-semibold tracking-widest uppercase text-sm mb-4 block">Depoimentos</span>
+            <h2 className="text-4xl md:text-5xl font-display text-foreground mb-6">O que meus pacientes dizem</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { name: "Mariana S.", text: "A Júlia mudou minha relação com a comida. O plano é super prático e realmente se encaixa na minha rotina." },
+              { name: "Ricardo F.", text: "Consegui atingir meus objetivos de hipertrofia com saúde. Profissional excelente e muito atenciosa." },
+              { name: "Carla M.", text: "O atendimento online facilitou muito minha vida. Sinto que tenho todo o suporte necessário mesmo à distância." }
+            ].map((testimonial, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-secondary/10 p-8 rounded-3xl border border-primary/5"
+              >
+                <div className="flex gap-1 text-primary mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <CheckCircle2 key={i} className="w-4 h-4 fill-primary" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground italic mb-6">"{testimonial.text}"</p>
+                <p className="font-bold text-foreground">{testimonial.name}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -407,7 +441,8 @@ export default function Home() {
                   <div>
                     <h3 className="text-xl font-bold mb-2">Horários</h3>
                     <p className="text-white/70">
-                      Segunda a Sexta: 08:00 - 18:00
+                      Segunda a Sexta: 18:00 - 21:00<br />
+                      Sábado: 08:00 - 15:00
                     </p>
                   </div>
                 </div>
