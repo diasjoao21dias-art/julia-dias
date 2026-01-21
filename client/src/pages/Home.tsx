@@ -153,7 +153,8 @@ export default function Home() {
             >
               Conheça a Profissional
             </motion.span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display text-foreground mb-8">Dra. Júlia Dias Braga</h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display text-foreground mb-4">Júlia Dias Braga</h2>
+            <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-8 block">Nutricionista Clínica</p>
             <div className="w-24 h-1.5 bg-primary/20 mx-auto mb-10 rounded-full overflow-hidden">
               <motion.div 
                 initial={{ x: "-100%" }}
@@ -279,15 +280,16 @@ export default function Home() {
             </div>
             
             <div className="w-full md:w-1/2">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display text-foreground mb-8">Como posso te ajudar</h2>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display text-foreground mb-8">Atendimento Nutricional</h2>
               
               <div className="space-y-6">
                 {[
+                  "Avaliação Antropométrica",
+                  "Plano Alimentar Personalizado",
                   "Reeducação Alimentar",
+                  "Criação de Rotina Saudável",
                   "Emagrecimento Saudável",
-                  "Nutrição para Doenças Crônicas",
-                  "Hipertrofia e Performance",
-                  "Saúde da Mulher"
+                  "Hipertrofia e Performance"
                 ].map((item, i) => (
                   <motion.div 
                     initial={{ opacity: 0, x: -20 }}
