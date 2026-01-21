@@ -79,7 +79,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1.5 gap-3 group active:scale-95 text-sm sm:text-base"
                 >
-                  Agende sua consulta agora mesmo!
+                  Iniciar Transformação
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
                 </a>
                 <a 
@@ -346,7 +346,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-10 py-5 rounded-full bg-white text-primary font-bold hover:bg-neutral-100 transition-all hover:shadow-2xl hover:-translate-y-1.5 gap-3 active:scale-95"
               >
-                Agendar Pelo Calendário
+                Agende sua consulta agora mesmo!
                 <Calendar className="w-5 h-5" />
               </a>
               <a 
