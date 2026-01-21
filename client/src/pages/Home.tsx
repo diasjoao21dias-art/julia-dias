@@ -1,3 +1,4 @@
+import personalHeroImg from "@assets/IMG_9770.jpg_1769008383132.jpeg";
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { ArrowRight, CheckCircle2, MapPin, Phone, Mail, Instagram, Facebook, Linkedin, Clock, Award, Heart, Stethoscope, Calendar } from "lucide-react";
@@ -56,7 +57,7 @@ export default function Home() {
               >
                 <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border-4 border-white relative group">
                   <img 
-                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2070&auto=format&fit=crop" 
+                    src={personalHeroImg} 
                     alt="Júlia Dias Braga" 
                     className="object-cover w-full h-full"
                   />
@@ -115,7 +116,7 @@ export default function Home() {
                 <div className="aspect-[4/5] bg-neutral-100 relative">
                   {/* UNPLASH: Professional nutritionist woman smiling in office setting, bright, natural light */}
                   <img 
-                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2070&auto=format&fit=crop" 
+                    src={personalHeroImg} 
                     alt="Júlia Dias Braga - Nutricionista" 
                     className="object-cover w-full h-full"
                   />
