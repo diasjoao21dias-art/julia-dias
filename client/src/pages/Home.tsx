@@ -79,7 +79,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1.5 gap-3 group active:scale-95 text-sm sm:text-base"
                 >
-                  Agendar Consulta Agora
+                  Agende sua consulta agora mesmo!
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
                 </a>
                 <a 
