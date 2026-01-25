@@ -1,4 +1,4 @@
-import personalHeroImg from "@assets/IMG_9770.jpg_1769008383132.jpeg";
+import personalHeroImg from "@assets/ChatGPT_Image_25_de_jan._de_2026,_20_47_11_1769385112003.png";
 import pratoComida1 from "@assets/ChatGPT_Image_25_de_jan._de_2026,_20_49_18_1769384983984.png";
 import pratoComida2 from "@assets/ChatGPT_Image_25_de_jan._de_2026,_20_42_40_1769384983985.png";
 import { motion } from "framer-motion";
