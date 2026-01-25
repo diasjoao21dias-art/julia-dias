@@ -1,4 +1,6 @@
 import personalHeroImg from "@assets/IMG_9770.jpg_1769008383132.jpeg";
+import pratoComida1 from "@assets/ChatGPT_Image_25_de_jan._de_2026,_20_49_18_1769384983984.png";
+import pratoComida2 from "@assets/ChatGPT_Image_25_de_jan._de_2026,_20_42_40_1769384983985.png";
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { ArrowRight, CheckCircle2, MapPin, Mail, Instagram, Facebook, Linkedin, Clock, Award, Heart, Stethoscope, Calendar } from "lucide-react";
@@ -206,8 +208,8 @@ export default function Home() {
               className="relative rounded-[3rem] overflow-hidden aspect-square border-8 border-white shadow-2xl"
             >
               <img 
-                src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2070&auto=format&fit=crop" 
-                alt="Consultation" 
+                src={pratoComida1} 
+                alt="Prato saudável" 
                 className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
@@ -268,11 +270,10 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row gap-16 items-center">
             <div className="w-full md:w-1/2">
-               {/* UNSPLASH: Healthy vibrant food bowl salad fresh ingredients flat lay */}
-              <div className="relative rounded-2xl overflow-hidden aspect-square shadow-xl">
+               <div className="relative rounded-2xl overflow-hidden aspect-square shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Healthy Food" 
+                  src={pratoComida2} 
+                  alt="Prato saudável" 
                   className="object-cover w-full h-full hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
