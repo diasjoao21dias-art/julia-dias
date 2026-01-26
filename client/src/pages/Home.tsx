@@ -501,6 +501,15 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          <div className="pt-12 border-t border-white/10 text-center">
+            <p className="text-white/40 text-sm">
+              &copy; {new Date().getFullYear()} Júlia Dias Braga. Todos os direitos reservados.
+            </p>
+            <div className="mt-4 text-white/30 text-xs">
+              Desenvolvido por <a href="https://oliviumsistemas.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors">Olivium Sistemas</a>
+            </div>
+          </div>
         </div>
       </section>
 
